@@ -6,28 +6,39 @@ def print(line)
   puts "#{line}"
 end
 
-print "Enter your first number."
+begin
 
-num1 = gets.chomp
+  print "Enter your first number."
 
-print "Enter your second number."
+  num1 = gets.chomp
 
-num2 = gets.chomp
+  print "Enter your second number."
 
-print "1) add  2) subtract  3) multiply 4) divide"
+  num2 = gets.chomp
 
-math = gets.chomp
+  print "1) add  2) subtract  3) multiply 4) divide"
 
-if math == '1'
-  result = num1.to_i + num2.to_i
-elsif math == '2'
-  result = num1.to_i - num2.to_i
-elsif math == '3'
-  result = num1.to_i * num2.to_i
-else math == '4'
-  result = num1.to_f / num2.to_f
-end
+  math = gets.chomp
 
-print "Result is #{result}"
+  if math == '1'
+    result = num1.to_i + num2.to_i
+  elsif math == '2'
+    result = num1.to_i - num2.to_i
+  elsif math == '3'
+    result = num1.to_i * num2.to_i
+  else math == '4'
+    result = num1.to_f / num2.to_f
+  end
+
+  print "The result is #{result}."
+
+
+  print "Do you have another calculation? (type 'Y' to continue, or any key to exit)"
+  answer = gets.chomp
+
+end while answer == 'Y' 
+
+print "Have a happy day. Thank you for input."
+
 
 
